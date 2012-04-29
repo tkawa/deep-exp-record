@@ -1,18 +1,25 @@
-<h1>Listing sites</h1>
+<article id="content">
+<hgroup>
+<h1>WORKS</h1>
+		<h2>私の過去の実績たち</h2>
+</hgroup>
 
-<table>
+<section class="sec_1">
+
+<table id="works">
+<% @sites.each do |site| %>
   <tr>
-    <th>Url</th>
-    <th>Title</th>
+      <th>Title</th>
+	  	<td><%= site.title %></td>
+		<td><%= site.url %></td>
+	
     <th>Description</th>
     <th></th>
     <th></th>
   </tr>
 
-<% @sites.each do |site| %>
   <tr>
-    <td><%= site.url %><br/><%= image_tag "http://capture.heartrails.com/large?#{site.url}" %></td>
-    <td><%= site.title %></td>
+    <td colspan="2"><%= image_tag "http://capture.heartrails.com/large?#{site.url}" %></td>	
     <td><%= site.description %></td>
     <td><%= link_to 'Edit', edit_user_site_path(site.user, site) %></td>
     <td><%= link_to 'Destroy', user_site_path(site.user, site), confirm: 'Are you sure?', method: :delete %></td>
@@ -20,6 +27,12 @@
 <% end %>
 </table>
 
+</section>
+
+
+
+
 <br />
 
 <%= link_to 'New Site', new_user_site_path %>
+</article>
