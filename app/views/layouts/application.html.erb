@@ -17,6 +17,16 @@
   <%# 未ログイン %>
   <%= link_to "Login", "/auth/#{DEFAULT_PROVIDER}" %>
 <% end %>
+<div id="rap">
+	<header>
+	ここがヘッダーなのである。うぃどすが８２４ぴくせる。はいとが３０５ぴくせるなのである。(´Д｀)＜ｶｯｺｲｲｰ
+	</header>
+		<nav>
+			<ul>
+				<li>TOP</li>	<li>PROFILE</li>	<li>WORKS</li>	<li>PROJECT'S</li>	<li>BLOG</li>	<li>CONTACT</li>
+			</ul>
+		</nav>
+	
 
 <%# 通知／エラーメッセージ %>
 <%= simple_format( flash[:notice], style: "color: green;" ) unless flash[:notice].blank? %>
@@ -24,6 +34,11 @@
 <%# ----- ／追加 ----- %>
 
 <%= yield %>
+
+<footer>
+		フッターだよ。イイネボタンとかツイッターのアイコンとか貼りたいよね♩(´・ω・｀)
+	</footer>
+</div>
 
 </body>
 </html>
