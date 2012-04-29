@@ -1,15 +1,19 @@
 <article id="content">
-
-<h1>Listing users</h1>
-
+<hgroup>
+	<h1>ようこそ！！deep "EXP" RECORDへ！</h1>
+		<h2>やぁ(´・ω・｀)ようこそ「deep "EXP" RECORD」へ、ここはね・・・・。<br />
+		FacebookやTwitterなんかで必死に趣味とか友人との交際関係なんかをアピールしても、まだまだ全然なんか足りないゼ！！
+		もっと俺にゃ、こんな趣味があるんだぜ！！・・・・・<br />的な人のためのサービスなんだよ。(｀・ω・´)ｼｬｷｰﾝ　
+		さぁ、ココへ足を踏み入れたならば、周りがドン引きするくらい自由に、存分に君自身をアピールしなはれ(・∀・)</h2>
+				<h3>ただし！！他人を不愉快にするような言動や行動はNGなんだよヽ(`Д´)ﾉ</h3>
+</hgroup>
 <section class="sec_1">
 
 <table class="top">
   <tr>
-    <th>Provider</th>
-    <th>Uid</th>
+    
     <th>Name</th>
-    <th>Screen name</th>
+    <th>Twitterのﾔｰﾂ</th>
     <th>Image</th>
     <th></th>
     <th></th>
@@ -18,12 +22,10 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.provider %></td>
-    <td><%= user.uid %></td>
     <td><%= user.name %></td>
-    <td><%= user.screen_name %></td>
-    <td><%= user.image %></td>
-    <td><%= link_to 'Show', user %></td>
+    <td>@<%= user.screen_name %></td>
+    <td><img src="<%= user.image %>" /></td>
+    <td><%= link_to 'GO TO PROFILE page', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

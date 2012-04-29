@@ -70,7 +70,12 @@ article#content hgroup h2{
 		font-weight:bold;
 		color:#FFF5EE;
 		}
-
+article#content hgroup h3{
+text-align:center;
+fontsize:14px;
+margin:5px 0;
+color:yellow;
+}
 article#content section.sec_1{
 width:784px;
 padding:5px 0px 10px 0px;
@@ -112,7 +117,8 @@ table, tr, th, td {
   border-spacing: 0px;
 }
 table.top {
-width:720px;
+width:740px;
+text-align:center;
 margin:5px auto 0px auto;
 background-color:#fffff0;
 }
