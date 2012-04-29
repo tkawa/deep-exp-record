@@ -51,7 +51,7 @@ class SitesController < ApplicationController
     respond_to do |format|
       if @site.save
         format.html { redirect_to user_sites_url(@site.user), notice: 'Site was successfully created.' }
-        format.json { render json: @site, status: :created, location: user_site_url(@site) }
+        format.json { render json: @site, status: :created, location: user_sites_url(@site.user) }
       else
         format.html { render action: "new" }
         format.json { render json: @site.errors, status: :unprocessable_entity }

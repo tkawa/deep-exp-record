@@ -1,7 +1,7 @@
 DeepExpRecord::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  resources :users, :except => [:new] do
+  resources :users, :except => [:new, :create] do
     resources :sites
   end
   match "/auth/:provider/callback" => "sessions#callback"
