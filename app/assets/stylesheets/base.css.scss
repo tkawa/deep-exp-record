@@ -43,19 +43,69 @@ height:34px;
 display:block;
 background-color:#ffddee;
 }
+
+/*コンテンツ内の設定*/
+article#content {
+width:784px;
+height:405px;
+padding:20px;
+background-color:#1E90FF;
+}
+article#content hgroup h1 {
+		margin:3px 0 3px 0;
+		padding:5px 2px 7px 4px;
+		background-color:#4169E1;
+		border-right:1px solid #f0ffff;
+		border-bottom:3px double #f0ffff;
+		font-size:19px;
+		font-weight:bold;
+		color:#F0FFFF;
+		box-shadow:2px 2px 7px #fffff0;
+		}
+article#content hgroup h2{
+		margin:3px 	4px;
+		padding:3px;
+		text-align:center;
+		font-size:11px;
+		color:#FFF5EE;
+		}
+
+article#content section.sec_1{
+width:784px;
+padding:5px 0px 10px 0px;
+margin:3px 0 10px 0;
+background-color:#fffff0;
+}
+article#content section.sec_1 p.bun{
+width:760px;
+margin:4px 12px 8px 12px;
+padding-right:8px;
+line-height:1.7em;
+}
+
+
+
+
+
 /* テーブル */
 table, tr, th, td {
   border: 1px solid #aaa;
   padding: 5px;
-  border-collapse: collapse;
+ border-collapse: collapse;
   border-spacing: 0px;
 }
+table.top {
+width:720px;
+margin:5px auto 0px auto;
+background-color:#fffff0;
+}
 
+table.top th{
+background-color:#6495ED;
+color:#fffff0;
+ white-space: nowrap;
+}
 .search table, .search tr, .search td {
   border: 0px solid #aaa;
   padding: 0px;
-}
-
-th {
-  white-space: nowrap;
 }
