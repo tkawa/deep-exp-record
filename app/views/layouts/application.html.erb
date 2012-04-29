@@ -21,11 +21,13 @@
 	<header>
 	ここがヘッダーなのである。うぃどすが８２４ぴくせる。はいとが３０５ぴくせるなのである。(´Д｀)＜ｶｯｺｲｲｰ
 	</header>
+  <% unless controller_name == 'users' && action_name == 'index' %>
 		<nav>
 			<ul>
 				<li>TOP</li>	<li>PROFILE</li>	<li>WORKS</li>	<li>PROJECT'S</li>	<li>BLOG</li>	<li>CONTACT</li>
 			</ul>
 		</nav>
+  <% end %>
 	
 
 <%# 通知／エラーメッセージ %>
