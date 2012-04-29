@@ -32,7 +32,7 @@
   <% unless controller_name == 'users' && action_name == 'index' %>
 		<nav>
 			<ul>
-				<li>TOP</li>	<li><%= link_to "PROFILE", user_path(@user) %></li>	<li><%= link_to "WORKS", user_sites_path(@user) %></li>	<li>PROJECT'S</li>	<li>BLOG</li>	<li>CONTACT</li>
+				<li><%= link_to "TOP", root_path %></li>	<li><%= link_to "PROFILE", user_path(@user) %></li>	<li><%= link_to "WORKS", user_sites_path(@user) %></li>	<li>PROJECT'S</li>	<li>BLOG</li>	<li>CONTACT</li>
 			</ul>
 		</nav>
   <% end %>

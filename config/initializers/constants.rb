@@ -19,4 +19,4 @@ else
 end
 
 # ---------- 共通定義 ---------- #
-APP_NAME = "YOUR_APP_NAME"
+APP_NAME = "Deep EXP record"
