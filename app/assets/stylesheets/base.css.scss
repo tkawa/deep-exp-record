@@ -63,10 +63,11 @@ article#content hgroup h1 {
 		box-shadow:2px 2px 7px #fffff0;
 		}
 article#content hgroup h2{
-		margin:3px 	4px;
-		padding:3px;
-		text-align:center;
-		font-size:11px;
+		margin:5px 	4px;
+		padding:4px 4px 4px 20px;
+		text-align:left;
+		font-size:13px;
+		font-weight:bold;
 		color:#FFF5EE;
 		}
 
@@ -83,7 +84,23 @@ padding-right:8px;
 line-height:1.7em;
 }
 
-
+/*テーブルの設定*/
+article#content section.sec_1 table#prof{
+width:760px;
+margin:auto auto;
+border: 1px solid #aaa;
+padding: 5px;
+border-collapse: collapse;
+border-spacing: 0px;
+background-color:#fffff0;
+}
+article#content section.sec_1 table#prof th{
+background-color:#6495ED;
+font-weight:bold;
+}
+article#content section.sec_1 table#prof td{
+text-align:center;
+}
 
 
 

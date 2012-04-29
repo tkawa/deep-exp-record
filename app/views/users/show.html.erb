@@ -5,8 +5,6 @@
 </hgroup>
  <section class="sec_1">
 
-		<p id="notice"><%= notice %></p> 	<!--ログインできたかどうかを表す所なんだってココ-->
-
 	<p class="bun">
     <%= @user.introduction %>
 	</p>
@@ -15,20 +13,25 @@
 </section><!--ログインできたかどうかを表す所なんだってココ-->
 
 <section class="sec_1">
-	<table>
+	<table id="prof">
 		<tr>
+  			<th><b>owner's photo</b></th>
 			<th><b>Twitter name:</b></th>
-  			<td><%= @user.name %></td>
+			<th><b>facebook</b></th>
+			<th><b>mixi</b></th>
+			<th><b>Linkedin</db></th>
 		</tr>
 		<tr>
-			<th><b>Screen name:</b></th>
-			<td><%= @user.screen_name %></td>
-		</tr>
-		<tr>
-			<th><b>owner's photo</b></th>
-			<td><img src="<%= @user.image %>" alt="owner's photo" /></td>
+			<td><img src="<%= @user.image %>" alt="owner's photo" /><br /><%= @user.name %></td>
+			<td>@<%= @user.screen_name %><br />		<!--twitter名表示-->
+				<a href="https://twitter.com/honma_tora" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-size="large" data-show-screen-name="false">@honma_toraをフォロー</a>
+			</td>
+			<td><div class="fb-like" data-href="http://deep-exp-record.herokuapp.com/users/1" data-send="true" data-layout="box_count" data-width="90" data-show-faces="true"></div></td>
+			<td>チェック</td>
+			<td>コンタクト</td>
 		</tr>
 	</table>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </section>
 
