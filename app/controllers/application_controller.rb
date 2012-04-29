@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :ssl_redirect if Rails.env.production?
   
   # 未ログインリダイレクト
-  before_filter :authorize
+  #before_filter :authorize
   
   # セッション有効期限延長
   before_filter :reset_session_expires
