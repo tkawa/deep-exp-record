@@ -25,10 +25,10 @@
 			<td><img src="<%= @user.image %>" alt="owner's photo" /><br /><%= @user.name %></td>
 			<td>
 			<!--twitter名表示-->@<%= @user.screen_name %><br />
-<!--twitterフォローボタン--><a href="https://twitter.com/honma_tora" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-size="large" data-show-screen-name="false">@honma_toraをフォロー</a>
+<!--twitterフォローボタン--><a href="https://twitter.com/<%= @user.screen_name %>" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-size="large" data-show-screen-name="false">@<%= @user.screen_name %>をフォロー</a>
 			</td>
 			<td>
-<!--facebookいいね！ボタン--><div class="fb-like" data-href="http://deep-exp-record.herokuapp.com/users/1" data-send="true" data-layout="box_count" data-width="90" data-show-faces="true"></div></td>
+<!--facebookいいね！ボタン--><div class="fb-like" data-href="<%= request.fullpath %>" data-send="true" data-layout="box_count" data-width="90" data-show-faces="true"></div></td>
 			<td>
 			<div data-plugins-type="mixi-favorite" data-service-key="..."></div>
 <script type="text/javascript">
