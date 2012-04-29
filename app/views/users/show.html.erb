@@ -5,26 +5,30 @@
 </hgroup>
  <section class="sec_1">
 
+		<p id="notice"><%= notice %></p> 	<!--ログインできたかどうかを表す所なんだってココ-->
+
 	<p class="bun">
     <%= @user.introduction %>
 	</p>
 		
 
-</section>
+</section><!--ログインできたかどうかを表す所なんだってココ-->
+
 <section class="sec_1">
-		<p id="notice"><%= notice %></p>
-		<p>
-  			<b>Twitter account name:</b>
-  			<%= @user.name %>
-		</p>
-		<p>
-			<b>Screen name:</b>
-			<%= @user.screen_name %>
-		</p>
-		<p>
-			<b>owner's photo</b>
-			<img src="<%= @user.image %>" alt="owner's photo" />
-		</p>
+	<table>
+		<tr>
+			<th><b>Twitter name:</b></th>
+  			<td><%= @user.name %></td>
+		</tr>
+		<tr>
+			<th><b>Screen name:</b></th>
+			<td><%= @user.screen_name %></td>
+		</tr>
+		<tr>
+			<th><b>owner's photo</b></th>
+			<td><img src="<%= @user.image %>" alt="owner's photo" /></td>
+		</tr>
+	</table>
 
 </section>
 
