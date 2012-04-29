@@ -2,7 +2,8 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    @sites = Site.all
+    @user = User.find(params[:user_id])
+    @sites = @user.sites
 
     respond_to do |format|
       format.html # index.html.erb
