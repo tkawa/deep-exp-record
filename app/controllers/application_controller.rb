@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :ssl_redirect if Rails.env.production?
   
   # 未ログインリダイレクト
-  #before_filter :authorize
+  #before_filter :authenticate
   
   # セッション有効期限延長
   before_filter :reset_session_expires
@@ -26,11 +26,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  #-----------#
-  # authorize #
-  #-----------#
+  #--------------#
+  # authenticate #
+  #--------------#
   # ログイン認証
-  def authorize
+  def authenticate
     # セッション／トップコントローラ以外で
     if params[:controller] != "sessions" and params[:controller] != "top"
       # 未ログインであればルートヘリダイレクト

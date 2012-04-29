@@ -1,4 +1,5 @@
 class SitesController < ApplicationController
+  before_filter :authorize, :only => [:new, :edit, :create, :update, :destroy]
   # GET /users/:user_id/sites
   # GET /users/:user_id/sites.json
   def index
@@ -86,6 +87,14 @@ class SitesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to sites_url }
       format.json { head :no_content }
+    end
+  end
+
+  private
+  def authorize
+    @user = User.find(params[:user_id])
+    unless @user == current_user
+      head :unauthorized
     end
   end
 end
