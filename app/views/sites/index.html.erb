@@ -12,7 +12,7 @@
 
 <% @sites.each do |site| %>
   <tr>
-    <td><%= site.url %><br/><%= image_tag "http://capture.heartrails.com/?#{site.url}" %></td>
+    <td><%= site.url %><br/><%= image_tag "http://capture.heartrails.com/large?#{site.url}" %></td>
     <td><%= site.title %></td>
     <td><%= site.description %></td>
     <td><%= link_to 'Show', user_site_path(site.user, site) %></td>
