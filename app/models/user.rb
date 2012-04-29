@@ -1,6 +1,7 @@
 # coding: utf-8
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
+  has_many :sites
 
   private
 
