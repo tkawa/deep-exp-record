@@ -1,30 +1,35 @@
-<p id="notice"><%= notice %></p>
+<article id="content">
+<hgroup>
+	<h1>PLOFILE</h1>
+			<h2>〜私について少しだけ教えちゃおうかなぁ、、知りたい？〜</h2>
+</hgroup>
+ <section class="sec_1">
 
-<p>
-  <b>Provider:</b>
-  <%= @user.provider %>
-</p>
+	<p class="bun">
+			ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。
+			ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。
+			texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttextexttext
+	</p>
+		
 
-<p>
-  <b>Uid:</b>
-  <%= @user.uid %>
-</p>
+</section>
+<section class="sec_1">
+		<p id="notice"><%= notice %></p>
+		<p>
+  			<b>Twitter account name:</b>
+  			<%= @user.name %>
+		</p>
+		<p>
+			<b>Screen name:</b>
+			<%= @user.screen_name %>
+		</p>
+		<p>
+			<b>owner's photo</b>
+			<img src="http://a0.twimg.com/profile_images/1997848854/463921530_38_normal.jpg" alt="owner's photo" />
+		</p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Screen name:</b>
-  <%= @user.screen_name %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @user.image %>
-</p>
-
+</section>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</article>
