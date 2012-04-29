@@ -20,7 +20,7 @@
 <% if current_user %>
   <%# ログイン済み %>
   <%= current_user.name %> : 
-   || <%= link_to "Logout" , logout_path %>
+   | <%= link_to "マイページ", user_path(current_user) %> | <%= link_to "Logout", logout_path %>
 <% else %>
   <%# 未ログイン %>
   <%= link_to "Login", "/auth/#{DEFAULT_PROVIDER}" %>
