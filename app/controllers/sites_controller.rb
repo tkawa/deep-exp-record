@@ -94,7 +94,10 @@ class SitesController < ApplicationController
   def authorize
     @user = User.find(params[:user_id])
     unless @user == current_user
-      head :unauthorized
+      respond_to do |format|
+        format.html { redirect_to :back, alert: 'Unauthorized operation.' }
+        format.json { head :unauthorized }
+      end
     end
   end
 end
