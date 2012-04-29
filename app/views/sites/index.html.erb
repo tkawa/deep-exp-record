@@ -9,20 +9,19 @@
 <table id="works">
 <% @sites.each do |site| %>
   <tr>
-      <th>Title</th>
-	  	<td><%= site.title %></td>
-		<td><%= site.url %></td>
-	
-    <th>Description</th>
-    <th></th>
-    <th></th>
+  	  <th rowspan="3"><%= site.title %><br />
+    	<%= image_tag "http://capture.heartrails.com/large?#{site.url}" %>
+	  </th>
+	  <th>URL：</th>
+	   <td><%= site.url %></td>
   </tr>
-
   <tr>
-    <td colspan="2"><%= image_tag "http://capture.heartrails.com/large?#{site.url}" %></td>	
-    <td><%= site.description %></td>
-    <td><%= link_to 'Edit', edit_user_site_path(site.user, site) %></td>
-    <td><%= link_to 'Destroy', user_site_path(site.user, site), confirm: 'Are you sure?', method: :delete %></td>
+  		<th>詳細：</th>
+	    <td colspan="2"><%= site.description %></td>
+ </tr>
+ <tr>
+        <td colspan="2"><%= link_to 'Edit', edit_user_site_path(site.user, site) %>
+          <%= link_to 'Destroy', user_site_path(site.user, site), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
