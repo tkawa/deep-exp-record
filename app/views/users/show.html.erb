@@ -1,14 +1,12 @@
 <article id="content">
 <hgroup>
 	<h1>PLOFILE</h1>
-			<h2>〜私について少しだけ教えちゃおうかなぁ、、知りたい？〜</h2>
+			<h2><%= @user.heading %></h2>
 </hgroup>
  <section class="sec_1">
 
 	<p class="bun">
-			ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。
-			ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。ここは私の紹介ページです。
-			texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttextexttext
+    <%= @user.introduction %>
 	</p>
 		
 
@@ -25,7 +23,7 @@
 		</p>
 		<p>
 			<b>owner's photo</b>
-			<img src="http://a0.twimg.com/profile_images/1997848854/463921530_38_normal.jpg" alt="owner's photo" />
+			<img src="<%= @user.image %>" alt="owner's photo" />
 		</p>
 
 </section>
