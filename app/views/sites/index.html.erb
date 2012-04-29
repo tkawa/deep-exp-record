@@ -12,16 +12,21 @@
 
 <% @sites.each do |site| %>
   <tr>
-    <td><%= site.url %></td>
+    <td><%= site.url %><br/><%= image_tag "http://capture.heartrails.com/?#{site.url}" %></td>
     <td><%= site.title %></td>
     <td><%= site.description %></td>
-    <td><%= link_to 'Show', site %></td>
-    <td><%= link_to 'Edit', edit_site_path(site) %></td>
-    <td><%= link_to 'Destroy', site, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', user_site_path(site.user, site) %></td>
+    <td><%= link_to 'Edit', edit_user_site_path(site.user, site) %></td>
+    <td><%= link_to 'Destroy', user_site_path(site.user, site), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
+
+
+
+
+
 <br />
 
-<%= link_to 'New Site', new_site_path %>
+<%= link_to 'New Site', new_user_site_path %>
