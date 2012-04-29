@@ -1,6 +1,6 @@
 class SitesController < ApplicationController
-  # GET /sites
-  # GET /sites.json
+  # GET /users/:user_id/sites
+  # GET /users/:user_id/sites.json
   def index
     @user = User.find(params[:user_id])
     @sites = @user.sites
@@ -11,9 +11,10 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/1
-  # GET /sites/1.json
+  # GET /users/:user_id/sites/1
+  # GET /users/:user_id/sites/1.json
   def show
+    @user = User.find(params[:user_id])
     @site = Site.find(params[:id])
 
     respond_to do |format|
@@ -22,9 +23,10 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/new
-  # GET /sites/new.json
+  # GET /users/:user_id/sites/new
+  # GET /users/:user_id/sites/new.json
   def new
+    @user = User.find(params[:user_id])
     @site = Site.new
 
     respond_to do |format|
@@ -33,14 +35,16 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/1/edit
+  # GET /users/:user_id/sites/1/edit
   def edit
+    @user = User.find(params[:user_id])
     @site = Site.find(params[:id])
   end
 
-  # POST /sites
-  # POST /sites.json
+  # POST /users/:user_id/sites
+  # POST /users/:user_id/sites.json
   def create
+    @user = User.find(params[:user_id])
     @site = Site.new(params[:site])
     @site.user_id = params[:user_id] # TODO: can create only me
 
@@ -55,9 +59,10 @@ class SitesController < ApplicationController
     end
   end
 
-  # PUT /sites/1
-  # PUT /sites/1.json
+  # PUT /users/:user_id/sites/1
+  # PUT /users/:user_id/sites/1.json
   def update
+    @user = User.find(params[:user_id])
     @site = Site.find(params[:id])
 
     respond_to do |format|
@@ -71,9 +76,10 @@ class SitesController < ApplicationController
     end
   end
 
-  # DELETE /sites/1
-  # DELETE /sites/1.json
+  # DELETE /users/:user_id/sites/1
+  # DELETE /users/:user_id/sites/1.json
   def destroy
+    @user = User.find(params[:user_id])
     @site = Site.find(params[:id])
     @site.destroy
 
